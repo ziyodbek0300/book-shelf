@@ -69,7 +69,7 @@ export default function SignUpPage() {
             <Box textAlign='center'>
                 <Button type="submit" variant="contained">Submit</Button>
                 <br/>
-                <Link to='/signup'>
+                <Link to='/login'>
                     <Typography mt={1.5} color='royalblue' fontSize="small">Login</Typography>
                 </Link>
             </Box>

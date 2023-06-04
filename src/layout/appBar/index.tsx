@@ -10,9 +10,11 @@ import React from "react";
 import Box from "@mui/material/Box";
 import {useCookies} from "react-cookie";
 import {MAIN_SECRET_NAME} from "../../constants";
+import {useNavigate} from "react-router-dom";
 
 export default function AppMenu(props: IAppMenu) {
     const [_1, _, remove] = useCookies();
+    const navigate = useNavigate();
     const {setOpen, open} = props;
 
     const handleDrawerOpen = () => {
@@ -28,7 +30,7 @@ export default function AppMenu(props: IAppMenu) {
     const handleClose = () => {
         remove(MAIN_SECRET_NAME);
         remove('key');
-        window.location.href = '/login';
+        navigate('/login');
         setAnchorEl(null);
     };
 
