@@ -16,7 +16,7 @@ export default function BooksList({data, isLoading}: IBooksList) {
                 spacing={{xs: 2, md: 3}}
                 columns={{xs: 4, sm: 8, md: 12}}
             >
-                {data?.data.map((bookObj) => (<BookCard
+                {data?.data?.map((bookObj) => (<BookCard
                     book={bookObj.book}
                     key={bookObj?.book?.isbn}
                 />))
